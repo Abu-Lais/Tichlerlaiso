@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "kleidungshalter-5-haken",
+  "projekt": "Kleidungshalter mit 5 Haken",
+  "beschreibung": "Ein Kleidungshalter aus rohem Holz mit fünf selbst gefertigten Holzhaken.",
+  "schritte": [
+    {
+      "id": "holzauswahl",
+      "titel": "Holzauswahl im Lager",
+      "ziel": "Günstiges Massivholz/Kiefer erkennen",
+      "hinweis": "Vorhandenes Holz vergleichen: Holzart, Zustand, nutzbare Maße und Preis. Die 3D-Ansicht zeigt einen Platzhalter; eine Fotoerkennung ist noch nicht enthalten."
+    },
+    {
+      "id": "stueckliste",
+      "titel": "Stückliste & Zuschnitt",
+      "ziel": "Maße eintragen + Rohmaßzugabe berechnen",
+      "hinweis": "Fertigmaße und materialabhängige Rohmaßzugaben vorbereiten. Die Eingabe und Berechnung der Stückliste folgen in einem weiteren Ausbauschritt."
+    },
+    {
+      "id": "maschinen",
+      "titel": "Maschinen-Fahrplan",
+      "ziel": "Kappsäge → Abrichthobel → Dickenhobel",
+      "hinweis": "Geplanter Beispielablauf. Die konkrete Reihenfolge und Einstellungen werden anhand von Werkstück, Maschine und betrieblicher Unterweisung festgelegt."
+    }
+  ]
+}
