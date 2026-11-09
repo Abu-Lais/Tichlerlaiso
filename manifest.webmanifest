@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "HIKMAH · Dein Werkstattkompass",
+  "short_name": "HIKMAH",
+  "description": "Dein nächster Schritt, dein Maschinenwissen und dein persönliches Erfahrungsbuch.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5ef",
+  "theme_color": "#163d32",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

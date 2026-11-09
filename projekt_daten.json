@@ -1,26 +1,187 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "kleidungshalter-5-haken",
+  "titel": "Kleidungshalter mit 5 Holzhaken",
   "projekt": "Kleidungshalter mit 5 Haken",
-  "beschreibung": "Ein Kleidungshalter aus rohem Holz mit fünf selbst gefertigten Holzhaken.",
+  "beschreibung": "Ein persönlicher Lernweg vom vorgegebenen Plan zum dokumentierten Werkstück: Trägerbrett und fünf selbst gefertigte Holzhaken.",
+  "einheit": "mm",
+  "annahmen": [
+    "Es liegen noch keine bestätigten Maße des echten Chefplans vor. Die Eingabefelder beginnen deshalb leer.",
+    "Das 3D-Projekt zeigt eine frei gestaltete Formidee; Geometrie, Verbindungen und Darstellung sind keine Fertigungszeichnung.",
+    "Der Projektweg ist eine Lernstruktur. Die konkrete Arbeitsfolge und Maschinenauswahl hängen von Plan, Werkstück und betrieblicher Unterweisung ab.",
+    "Rohmaßzugaben müssen für Materialzustand und Bearbeitung festgelegt werden; der Rechner besitzt keine pauschale automatische Hobelzugabe.",
+    "Die Materialprüfung verwendet einen konservativen Längsstreifenvergleich mit angenommener 3-mm-Schnittfuge. Sie ist keine Zuschnittoptimierung und keine Holzbestimmung."
+  ],
   "schritte": [
     {
-      "id": "holzauswahl",
-      "titel": "Holzauswahl im Lager",
-      "ziel": "Günstiges Massivholz/Kiefer erkennen",
-      "hinweis": "Vorhandenes Holz vergleichen: Holzart, Zustand, nutzbare Maße und Preis. Die 3D-Ansicht zeigt einen Platzhalter; eine Fotoerkennung ist noch nicht enthalten."
+      "id": "verstehen",
+      "titel": "Den Auftrag wirklich verstehen",
+      "kurz": "Plan verstehen",
+      "ziel": "Du kannst erklären, was du bauen sollst und welche Angaben noch fehlen.",
+      "warum": "Ein unklarer Plan wird durch schnelles Arbeiten nicht klarer. Eine geklärte Frage spart später Material und Umwege.",
+      "aufgabe": "Betrachte zuerst ein Bauteil im Plan. Finde seinen Namen, seine Anzahl und seine Fertigmaße. Markiere jede offene Angabe.",
+      "pruefpunkte": [
+        "Aufbau und fünf selbst gefertigte Holzhaken sind verstanden.",
+        "Maße und Befestigungsart sind im Plan gefunden oder als Frage notiert.",
+        "Das gewünschte Endergebnis ist mit dem Auftraggeber geklärt."
+      ],
+      "maschine": null,
+      "wissenskarte": "plan-lesen"
+    },
+    {
+      "id": "material",
+      "titel": "Geeignetes Holz auswählen",
+      "kurz": "Holz auswählen",
+      "ziel": "Du wählst aus vorhandenem Material eine geeignete, wirtschaftliche Möglichkeit.",
+      "warum": "Der niedrigste Preis allein hilft nicht, wenn Maße, Zustand oder Verwendung nicht passen. Ein nutzbarer Rest kann dagegen sehr wertvoll sein.",
+      "aufgabe": "Erfasse ein vorhandenes Brett mit seinen nutzbaren Maßen, seinem Zustand und dem Preis für das gesamte Brett. Holzart unbekannt ist eine erlaubte Antwort.",
+      "pruefpunkte": [
+        "Nutzbare Maße und erkennbare Schäden sind erfasst.",
+        "Holzart und Eignung sind geklärt oder bewusst als offen markiert.",
+        "Die Materialwahl passt zu Nutzung, Befestigung und gewünschter Oberfläche."
+      ],
+      "maschine": null,
+      "wissenskarte": "material-wirtschaftlich"
     },
     {
       "id": "stueckliste",
-      "titel": "Stückliste & Zuschnitt",
-      "ziel": "Maße eintragen + Rohmaßzugabe berechnen",
-      "hinweis": "Fertigmaße und materialabhängige Rohmaßzugaben vorbereiten. Die Eingabe und Berechnung der Stückliste folgen in einem weiteren Ausbauschritt."
+      "titel": "Aus dem Plan wird eine Stückliste",
+      "kurz": "Stückliste",
+      "ziel": "Jedes Bauteil hat eine Stückzahl, eindeutige Fertigmaße und begründete Rohmaße.",
+      "warum": "Eine Stückliste verbindet Zeichnung und Werkstatt. Du kannst damit vor dem ersten Schnitt prüfen, ob Material und Auftrag zusammenpassen.",
+      "aufgabe": "Trage die Maße vom Plan ein. Lege die nötigen Zugaben mit deinem Ausbilder fest und prüfe anschließend die erzeugten Rohmaße.",
+      "pruefpunkte": [
+        "Alle Maße sind in Millimetern und in der Reihenfolge Länge × Breite × Dicke erfasst.",
+        "Stückzahlen, Faserrichtung und Material sind dem Plan zugeordnet.",
+        "Rohmaßzugaben und der konkrete Arbeitsablauf sind fachlich abgestimmt."
+      ],
+      "maschine": null,
+      "wissenskarte": "roh-fertig"
     },
     {
-      "id": "maschinen",
-      "titel": "Maschinen-Fahrplan",
-      "ziel": "Kappsäge → Abrichthobel → Dickenhobel",
-      "hinweis": "Geplanter Beispielablauf. Die konkrete Reihenfolge und Einstellungen werden anhand von Werkstück, Maschine und betrieblicher Unterweisung festgelegt."
+      "id": "ablaengen",
+      "titel": "Das Ablängen vorbereiten",
+      "kurz": "Ablängen",
+      "ziel": "Du kennst das Längenziel, die zugehörige Maschine und die offenen Voraussetzungen.",
+      "warum": "Rohzuschnitt und Fertigzuschnitt haben unterschiedliche Ziele. Das Werkstück muss für den vorgesehenen Arbeitsgang geeignet und beherrschbar sein.",
+      "aufgabe": "Vergleiche Roh- und Fertiglänge. Besprich die konkrete Aufteilung des Materials und den Arbeitsgang an der vorhandenen Kappsäge.",
+      "pruefpunkte": [
+        "Das Ziel dieses Arbeitsgangs ist als Roh- oder Fertigmaß eindeutig.",
+        "Aufteilung, Werkstückgröße und Arbeitsweise wurden an der konkreten Maschine besprochen.",
+        "Das entstandene Ergebnis ist gegen das vorgesehene Maß geprüft."
+      ],
+      "maschine": "saw",
+      "wissenskarte": "bezug-anschlag"
+    },
+    {
+      "id": "abrichten",
+      "titel": "Eine verlässliche Bezugsfläche verstehen",
+      "kurz": "Abrichten",
+      "ziel": "Du verstehst, welche Fläche oder Kante als Bezug für weitere Bearbeitung dient.",
+      "warum": "Weitere Maße brauchen eine eindeutige Ausgangsfläche. Eine krumme Fläche wird durch das Messen allein nicht zu einer verlässlichen Referenz.",
+      "aufgabe": "Lass dir am Werkstück die vorgesehene Bezugsfläche und Bezugskante zeigen. Ordne sie im Lernmodell den Begriffen zu.",
+      "pruefpunkte": [
+        "Die vorgesehene Bezugsfläche und Bezugskante sind verstanden.",
+        "Eignung und Handhabung des Werkstücks sind betrieblich geklärt.",
+        "Der erreichte Zustand wurde mit dem Ausbilder überprüft und eindeutig markiert."
+      ],
+      "maschine": "jointer",
+      "wissenskarte": "abrichten-dicke"
+    },
+    {
+      "id": "dickenhobeln",
+      "titel": "Die geforderte Dicke erreichen",
+      "kurz": "Dickenhobeln",
+      "ziel": "Du kannst Bezugsfläche, Dickenmaß und den gewünschten Endzustand zuordnen.",
+      "warum": "Dickenhobeln und Abrichten erfüllen verschiedene Aufgaben. Die Bezugsfläche beeinflusst, welches Ergebnis der folgende Arbeitsgang erreichen kann.",
+      "aufgabe": "Vergleiche Rohdicke und Fertigdicke. Halte fest, welche Fläche als Bezug dient und welches Maß anschließend geprüft wird.",
+      "pruefpunkte": [
+        "Bezugsfläche und geforderte Fertigdicke sind eindeutig.",
+        "Werkstück und Arbeitsgang sind für die vorhandene Maschine abgestimmt.",
+        "Die erreichte Dicke ist an mehreren sinnvollen Stellen geprüft."
+      ],
+      "maschine": "thickness",
+      "wissenskarte": "messen-pruefen"
+    },
+    {
+      "id": "formatieren",
+      "titel": "Die endgültigen Bauteilmaße klären",
+      "kurz": "Formatieren",
+      "ziel": "Die Bauteile entsprechen den vorgesehenen Fertigmaßen und ihrer Zuordnung.",
+      "warum": "Gleiche Teile brauchen gleiche Bezugspunkte. Form, Faserrichtung und spätere Verbindungen gehören schon beim endgültigen Zuschnitt zusammen.",
+      "aufgabe": "Vergleiche jedes Bauteil mit seiner Zeile in der Stückliste. Kläre die geeigneten Arbeitsmittel und die konkrete Reihenfolge mit deinem Ausbilder.",
+      "pruefpunkte": [
+        "Bauteile und jeweilige Fertigmaße sind eindeutig zugeordnet.",
+        "Arbeitsmittel, Folge und Bezugspunkte sind abgestimmt.",
+        "Anzahl, Maße und die für den Auftrag nötige Rechtwinkligkeit sind geprüft."
+      ],
+      "maschine": null,
+      "wissenskarte": "faserrichtung"
+    },
+    {
+      "id": "bohren",
+      "titel": "Bohrungen und Verbindung verstehen",
+      "kurz": "Bohren & verbinden",
+      "ziel": "Du weißt, wofür jedes Loch gebraucht wird und woran die Verbindung beurteilt wird.",
+      "warum": "Eine Lochposition allein beschreibt noch keine vollständige Bohrung. Verbindung, Material, Durchmesser und Tiefe müssen zusammenpassen.",
+      "aufgabe": "Ordne jede Bohrung ihrem Zweck zu: Befestigung, Verbindung oder Durchführung. Kläre die fehlenden Angaben vor dem Arbeitsgang.",
+      "pruefpunkte": [
+        "Lochpositionen, Zweck, Durchmesser und Tiefe sind geklärt.",
+        "Bohr- oder Schraubwerkzeug und Werkstücksicherung sind abgestimmt.",
+        "Bohrungen und Verbindungen entsprechen dem vereinbarten Plan."
+      ],
+      "maschine": "drill",
+      "wissenskarte": "bohren-schrauben"
+    },
+    {
+      "id": "pruefen",
+      "titel": "Ergebnis prüfen und Erfahrung behalten",
+      "kurz": "Prüfen & lernen",
+      "ziel": "Du kannst zeigen, was fertig ist, und eine Erkenntnis für dein nächstes Projekt festhalten.",
+      "warum": "Dein eigener Erfahrungsschatz wächst, wenn du eine konkrete Beobachtung mit ihrem Grund und einem nächsten Handgriff verbindest.",
+      "aufgabe": "Vergleiche Werkstück und Auftrag. Fotografiere das Ergebnis und halte einen Satz fest: „Beim nächsten Mal achte ich auf …“",
+      "pruefpunkte": [
+        "Anzahl, Maße, Oberfläche und Anordnung wurden mit dem Auftrag verglichen.",
+        "Befestigung und vorgesehene Nutzung sind fachlich beurteilt.",
+        "Offene Punkte und eine persönliche Erkenntnis sind dokumentiert."
+      ],
+      "maschine": null,
+      "wissenskarte": "hikmah-reflexion"
     }
-  ]
+  ],
+  "quellen": [
+    {
+      "titel": "Grundwissen · an der konkreten Maschine mit Unterweisung abgleichen",
+      "url": "https://www.bghm.de/arbeitsschuetzer/themen/holz/holzbearbeitungsmaschinen"
+    },
+    {
+      "maschine": "saw",
+      "titel": "BGHM · Gehrungskappkreissäge",
+      "url": "https://www.bghm.de/arbeitsschuetzer/praxishilfen/arbeitsschutz-kompakt/097-gehrungskappkreissaege"
+    },
+    {
+      "maschine": "jointer",
+      "titel": "BGHM · Arbeiten an Abrichthobelmaschinen",
+      "url": "https://www.bghm.de/arbeitsschuetzer/praxishilfen/arbeitsschutz-kompakt/034-arbeiten-an-abrichthobelmaschinen/"
+    },
+    {
+      "maschine": "thickness",
+      "titel": "BGHM · Arbeiten an Dickenhobelmaschinen",
+      "url": "https://www.bghm.de/arbeitsschuetzer/praxishilfen/arbeitsschutz-kompakt/041-arbeiten-an-dickenhobelmaschinen/"
+    },
+    {
+      "maschine": "drill",
+      "titel": "BGHM · Fachinformationen zu Maschinen",
+      "url": "https://www.bghm.de/arbeitsschuetzer/themen/maschinen"
+    }
+  ],
+  "module": {
+    "projektweg": "wissen.js: PROJECT_STEPS",
+    "maschinenwissen": "wissen.js: MACHINES",
+    "wissenskarten": "wissen.js: LESSONS",
+    "rechnungen": "kalkulation.js",
+    "persoenlicherStand": "speicher.js",
+    "visualisierung": "szene.js",
+    "bedienung": "app.js"
+  }
 }

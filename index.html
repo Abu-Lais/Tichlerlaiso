@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#f1ede4">
-    <meta name="description" content="Dein ruhiger Werkstattbegleiter: ein Arbeitsschritt, eine 3D-Ansicht und ein Platz zum Wiederanknüpfen.">
-    <title>Meisterbegleiter · Kleidungshalter</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d493c'/%3E%3Cpath d='M15 44V20l17 16 17-16v24' fill='none' stroke='%23f1ede4' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#163d32" />
+    <meta
+      name="description"
+      content="HIKMAH ist dein persönlicher Werkstattkompass: Zusammenhänge verstehen, den nächsten Schritt finden und dein Erfahrungswissen bewahren."
+    />
+    <title>HIKMAH · Dein Werkstattkompass</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23163d32'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23ede8d9' stroke-width='1.5'/%3E%3Cpath d='m39 17-2 20-20 10 10-20Z' fill='%23dba575'/%3E%3Cpath d='m39 17-12 10 10 10Z' fill='%23faf7ed'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <script type="importmap">
       {
         "imports": {
@@ -19,73 +29,299 @@
     <script type="module" src="./app.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#step-title">Zum aktuellen Schritt</a>
-    <canvas id="scene-canvas" role="img" aria-label="Interaktive 3D-Ansicht: ein Rohholz-Würfel auf einer Werkbank" aria-describedby="scene-help"></canvas>
-
-    <div class="layout">
-      <header class="masthead">
-        <div class="brand">
-          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-            <rect width="40" height="40" rx="11" fill="currentColor"/>
-            <path d="M10 28V13l10 9 10-9v15" fill="none" stroke="#f9f7f0" stroke-width="3" stroke-linejoin="round"/>
+    <a class="skip-link" href="#view">Zum Inhalt</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Werkstattkompass">
+        <a
+          class="wordmark"
+          href="#compass"
+          data-route="compass"
+          aria-label="Hikmah, zum Kompass"
+        >
+          <svg class="compass-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle
+              cx="24"
+              cy="24"
+              r="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            />
+            <path
+              d="M24 1v7m0 32v7M1 24h7m32 0h7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            />
+            <path d="m30 11-2 17-17 9 9-17Z" fill="#d9aa7c" />
+            <path d="m30 11-10 9 8 8Z" fill="#faf8ed" />
+            <circle cx="24" cy="24" r="2" fill="#163d32" />
           </svg>
+          <span>HIKMAH<small>DEIN WERKSTATTKOMPASS</small></span>
+        </a>
+        <p class="sidebar-label">Dein Weg</p>
+        <nav class="main-navigation" aria-label="Hauptnavigation">
+          <button
+            class="nav-item active"
+            data-route="compass"
+            type="button"
+            aria-label="Kompass"
+            aria-current="page"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="m15.5 8.5-2 5-5 2 2-5Z" /></svg
+            ><span>Kompass</span
+            ><span class="nav-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button
+            class="nav-item"
+            data-route="project"
+            type="button"
+            aria-label="Mein Projekt"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 7 9-4 9 4-9 4Z" />
+              <path d="M3 7v10l9 4 9-4V7M12 11v10" /></svg
+            ><span>Mein Projekt</span>
+          </button>
+          <button
+            class="nav-item"
+            data-route="machines"
+            type="button"
+            aria-label="Maschinen"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 20h18M5 20V9h14v11M3 9h18M8 9V5h8v4M9 14h6" />
+              <circle cx="12" cy="17" r="1" /></svg
+            ><span>Maschinen</span>
+          </button>
+          <button
+            class="nav-item"
+            data-route="material"
+            type="button"
+            aria-label="Material und Maße"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="m4 4 16 1 1 15-16-1ZM4 4l1 15M8 5v4m4-4v3m4-3v4M6 13h13m-9 0v5m5-5v5"
+              /></svg
+            ><span>Material &amp; Maße</span>
+          </button>
+          <button
+            class="nav-item"
+            data-route="wisdom"
+            type="button"
+            aria-label="Meine Hikmah"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1ZM12 5v15M6 8h3m-3 4h3m6-4h3m-3 4h3"
+              /></svg
+            ><span>Meine Hikmah</span>
+          </button>
+        </nav>
+        <div class="sidebar-project">
+          <span class="sidebar-project-dot" aria-hidden="true"></span>
+          <p>
+            Dein Werkstück<strong>Kleidungshalter</strong
+            ><span>5 Haken. Dein nächster Schritt.</span>
+          </p>
+        </div>
+        <div class="sidebar-footer">
+          <span class="apprentice-avatar" aria-hidden="true">L</span>
           <div>
-            <p class="brand-name">Meisterbegleiter</p>
-            <p class="brand-caption">Dein Platz zum Weiterkommen.</p>
+            <strong>Auf deinem Weg.</strong><span>2. Lehrjahr → Meister</span>
+          </div>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m8 12 3 3 5-6" />
+            <circle cx="12" cy="12" r="9" />
+          </svg>
+        </div>
+      </aside>
+      <div class="main-shell">
+        <header class="topbar">
+          <div class="page-heading">
+            <p id="page-eyebrow" class="eyebrow">Dein Werkstattkompass</p>
+            <h1 id="page-title">Ein klarer nächster Schritt.</h1>
+            <p id="page-subtitle">Verstehen. Anfangen. Wiederanknüpfen.</p>
+          </div>
+          <div class="topbar-actions">
+            <button
+              id="quick-capture"
+              class="capture-button"
+              type="button"
+              aria-label="Gedanke festhalten"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" /></svg
+              ><span>Gedanke festhalten</span>
+            </button>
+            <button id="pause-button" class="pause-button" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 6v12m8-12v12" /></svg
+              ><span>Wo war ich?<small>Stand sichern &amp; Pause</small></span>
+            </button>
+            <button
+              id="resume-work"
+              class="button primary"
+              type="button"
+              hidden
+            >
+              Hier weitermachen <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </header>
+        <p
+          id="app-status"
+          class="app-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <main id="view" class="view" tabindex="-1">
+          <section class="card loading-card">
+            <span class="tag">HIKMAH</span>
+            <h2>Dein Wissen bekommt einen Platz.</h2>
+            <p class="muted">Dein Werkstattkompass wird vorbereitet.</p>
+          </section>
+        </main>
+        <footer class="workspace-footer">
+          <span>Mit jedem Werkstück wächst dein Wissen.</span
+          ><span
+            >HIKMAH <span aria-hidden="true">·</span> Werkstattkompass</span
+          >
+        </footer>
+      </div>
+    </div>
+    <dialog id="pause-dialog" class="app-dialog" aria-labelledby="pause-title">
+      <form method="dialog">
+        <div class="dialog-heading">
+          <span class="tag orange">Den Faden behalten</span
+          ><button
+            class="icon-button"
+            type="button"
+            data-close-dialog
+            aria-label="Schließen"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M6 18 18 6" />
+            </svg>
+          </button>
+        </div>
+        <h2 id="pause-title">Hier warst du.</h2>
+        <p id="pause-context" class="muted"></p>
+        <div class="field">
+          <label for="pause-note">Mein nächster Handgriff</label
+          ><textarea
+            id="pause-note"
+            rows="3"
+            maxlength="1000"
+            placeholder="Ein kurzer Satz, mit dem du gleich wieder einsteigen kannst …"
+          ></textarea>
+        </div>
+        <p class="small muted">
+          Dein Schritt, deine Notizen und deine Ansicht bleiben zusammen.
+        </p>
+        <div class="actions dialog-actions">
+          <button class="button ghost" type="button" data-close-dialog>
+            Ohne Notiz pausieren</button
+          ><button id="save-pause" class="button primary" type="button">
+            Rückkehrnotiz speichern
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog
+      id="capture-dialog"
+      class="app-dialog"
+      aria-labelledby="capture-title"
+    >
+      <form id="capture-form">
+        <div class="dialog-heading">
+          <span class="tag">Deine Hikmah</span
+          ><button
+            class="icon-button"
+            type="button"
+            data-close-dialog
+            aria-label="Schließen"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M6 18 18 6" />
+            </svg>
+          </button>
+        </div>
+        <h2 id="capture-title">Ein Gedanke. Gut aufgehoben.</h2>
+        <p class="muted">Was möchtest du deinem späteren Ich mitgeben?</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="capture-entry-title">Überschrift</label
+            ><input
+              id="capture-entry-title"
+              name="title"
+              required
+              maxlength="100"
+              placeholder="Zum Beispiel: Meine Merkhilfe fürs Abrichten"
+            />
+          </div>
+          <div class="field">
+            <label for="capture-kind">Art</label
+            ><select id="capture-kind" name="kind">
+              <option>Erkenntnis</option>
+              <option>Frage</option>
+              <option>Merksatz</option>
+              <option>Dokumentation</option>
+              <option>Plan</option>
+            </select>
           </div>
         </div>
-        <span class="prototype-badge">Prototyp <span aria-hidden="true">01</span></span>
-      </header>
-
-      <aside class="scene-tools" aria-label="3D-Ansicht">
-        <p class="scene-label">Rohholz <span aria-hidden="true">·</span> 3D-Platzhalter</p>
-        <p id="scene-help">Ziehen zum Drehen. Mit zwei Fingern zoomen.</p>
-        <button id="reset-view" class="quiet-button" type="button">
-          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 6a7 7 0 1 1-1 7M4 2v5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Ansicht zurücksetzen
-        </button>
-        <p id="scene-status" class="scene-status" role="status" aria-live="polite">3D-Ansicht lädt…</p>
-      </aside>
-
-      <main class="workspace">
-        <section class="focus-card" aria-labelledby="step-title">
-          <div class="project-heading">
-            <p class="eyebrow">Dein Projekt</p>
-            <p id="project-title" class="project-title">Kleidungshalter mit 5 Haken</p>
-          </div>
-
-          <div class="current-step">
-            <p id="step-count" class="step-count">Schritt 1 von 3</p>
-            <h1 id="step-title" tabindex="-1">Dein nächster Schritt</h1>
-            <p id="step-goal" class="step-goal">Die Projektdaten werden geladen.</p>
-            <p id="step-detail" class="step-detail"></p>
-            <p id="data-status" class="data-status" role="status" aria-live="polite"></p>
-          </div>
-
-          <details class="note-section">
-            <summary>Meine Merkhilfe <span>optional</span></summary>
-            <label class="visually-hidden" for="step-note">Notiz zum aktuellen Arbeitsschritt</label>
-            <textarea id="step-note" rows="3" maxlength="1000" placeholder="Zum Beispiel: Hier mache ich gleich weiter …" disabled></textarea>
-          </details>
-
-          <nav class="step-navigation" aria-label="Projektschritte">
-            <button id="previous-step" class="secondary-button" type="button" disabled><span aria-hidden="true">←</span> Zurück</button>
-            <button id="next-step" class="secondary-button" type="button" disabled>Weiter <span aria-hidden="true">→</span></button>
-          </nav>
-
-          <div class="pause-area">
-            <button id="remember-button" class="remember-button" type="button" disabled>
-              <svg class="remember-icon" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 10v8m6-8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span><strong>Wo war ich?</strong><small>Stand merken &amp; Pause</small></span>
-            </button>
-            <button id="resume-button" class="resume-button" type="button" hidden>Hier weitermachen <span aria-hidden="true">↗</span></button>
-            <p id="save-status" class="save-status" role="status" aria-live="polite">Dein Stand bleibt auf diesem Gerät.</p>
-          </div>
-        </section>
-      </main>
-
-      <footer class="page-footer">Ein Schritt nach dem anderen.</footer>
-    </div>
-    <noscript><p class="noscript-message">Bitte aktiviere JavaScript, um die 3D-Ansicht und deinen Projektstand zu nutzen.</p></noscript>
+        <div class="field">
+          <label for="capture-body">Dein Gedanke</label
+          ><textarea
+            id="capture-body"
+            name="body"
+            rows="4"
+            required
+            maxlength="5000"
+            placeholder="Auch eine offene Frage darf hier einen Platz haben."
+          ></textarea>
+        </div>
+        <div class="field file-field">
+          <label for="capture-photo"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h4l2-3h4l2 3h4v14H4Z" />
+              <circle cx="12" cy="13" r="4" /></svg
+            >Foto hinzufügen <span class="small muted">optional</span></label
+          ><input
+            id="capture-photo"
+            name="photo"
+            type="file"
+            accept="image/*"
+          />
+        </div>
+        <p id="capture-error" class="small" role="alert"></p>
+        <div class="actions dialog-actions">
+          <button class="button ghost" type="button" data-close-dialog>
+            Abbrechen</button
+          ><button class="button primary" type="submit">
+            In meiner Hikmah speichern <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <input
+      id="import-backup"
+      type="file"
+      accept="application/json,.json"
+      hidden
+    />
+    <noscript
+      ><div class="noscript-message">
+        <strong>Dein Kompass braucht JavaScript.</strong>
+        <p>
+          Aktiviere JavaScript, damit Projekte, Merkhilfen und die 3D-Ansichten
+          funktionieren.
+        </p>
+      </div></noscript
+    >
   </body>
 </html>

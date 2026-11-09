@@ -1,0 +1,13 @@
+{
+  "name": "hikmah-werkstattkompass",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Persönlicher Werkstatt- und Lernbegleiter mit lokalen Daten und Three.js-Lernmodellen.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
